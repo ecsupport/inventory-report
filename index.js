@@ -58,7 +58,7 @@ function transformJsonToRow(inventory, environment) {
       if (!ip) continue;
 
       ++index;
-      const onPremise = ip.startsWith('ec2') ? 'Yes' : 'No';
+      const onPremise = ip.startsWith('ec2') ? 'No' : 'Yes';
       const location = getLocation(name);
       const line = [
         index,
