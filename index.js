@@ -9,6 +9,7 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 const appendFile = util.promisify(fs.appendFile);
 const environments = ['production', 'demo', 'staging'];
 const filePath = `evercheck-hosts-inventory-${Date.now()}.csv`;
+let index = 0;
 const header = [
   'Number',
   'Hostame',
@@ -49,7 +50,6 @@ function readInventoryFromGithub(environment = 'production') {
 
 function transformJsonToRow(inventory, environment) {
   const rows = [];
-  let index = 0;
 
   for (const hostgroup in inventory[`${environment}_hosts`]) {
     const currentHosts = inventory[`${environment}_hosts`][hostgroup];
