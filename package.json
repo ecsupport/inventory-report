@@ -1,0 +1,22 @@
+{
+  "name": "inventory-report",
+  "version": "1.0.0",
+  "description": "Export a CSV report with all hosts managed by Ansible.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-ecsupport:ecsupport/inventory-report"
+  },
+  "keywords": [
+    "Export"
+  ],
+  "author": "jcalle@condorlabs.io",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^18.0.6",
+    "dotenv": "^8.2.0"
+  }
+}
